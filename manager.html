@@ -1,0 +1,433 @@
+<table  cellspacing='1'  width="870"  align="center" >
+    <tr>
+        <td align="left">
+            <table class="cls-search-table"  border="0" cellpadding="0" cellspacing="0" height="40" width="870" >
+                <tbody>
+                    <tr>
+                        <td width="6" align="left" valign="top" background="/szseWeb/common/images/search05.gif">
+                            <img src="/szseWeb/common/images/search01.gif" height="6" width="6"/>
+                        </td>
+                        <td rowspan="3" >
+                            <table border='0' >
+                                <tr valign='bottom'>
+                                    <td align='left'>
+                                        <span style="margin-left:16px;"></span>
+                                        <span class="cls-search-label">公司板块</span>
+                                        <select style='width:196px;' name="selectGsbk" id="1801_cxda_gid_tab1_con_selectGsbk" class="cls-selectbox" title="公司板块"  onkeypress="doReportInputboxClick(event,'1801_cxda','tab1')">
+                                            <option value=""  selected  >全部</option>
+                                            <option value="main"  >主板</option>
+                                            <option value="sme"  >中小企业板</option>
+                                            <option value="nm"  >创业板</option>
+                                        </select>
+                                        <span style="margin-left:23px;"></span>
+                                        <span class="cls-search-label">代码或简称</span>
+                                        <input value="" style='width:195px;' type="text" name="txtDMorJC" id="1801_cxda_gid_tab1_con_txtDMorJC" title="代码或简称" onkeypress="doReportInputboxClick(event,'1801_cxda','tab1')" class='cls-textbox' onFocus="this.select();if(!this.obj) this.obj=initializeProperties(this,'ZA%7C%7CEB%7C%7CCY',null,'3',null,'120',null,null,'1801_cxda_tab1_btn',false,'3');"/>
+                                    </td>
+                                </tr>
+                                <tr valign='top'  height='28' >
+                                    <td align='left'>
+                                        <span style="margin-left:5px;"></span>
+                                        <span class="cls-search-label">董监高姓名</span>
+                                        <input value="" style='width:191px;' type="text" name="txtGgxm" id="1801_cxda_gid_tab1_con_txtGgxm" title="董监高姓名" onkeypress="doReportInputboxClick(event,'1801_cxda','tab1')" class='cls-textbox' onFocus="this.select();"/>
+                                        <span style="margin-left:35px;"></span>
+                                        <span class="cls-search-label">变动日期</span>
+                                        <input value="" style='width:82px;' type="text" name="txtStart" id="1801_cxda_gid_tab1_con_txtStart" title="日期格式为：YYYY-MM-DD" onkeypress="doReportInputboxClick(event,'1801_cxda','tab1')" class='cls-datepicker' onblur="blurJD()" onClick="getcalendar(this,'yyyy-mm-dd',event)" onFocus="this.select();"/>
+                                        <span style="margin-left:5px;"></span>
+                                        <span class="cls-search-label">至</span>
+                                        <input value="" style='width:83px;' type="text" name="txtEnd" id="1801_cxda_gid_tab1_con_txtEnd" title="日期格式为：YYYY-MM-DD" onkeypress="doReportInputboxClick(event,'1801_cxda','tab1')" class='cls-datepicker' onblur="blurJD()" onClick="getcalendar(this,'yyyy-mm-dd',event)" onFocus="this.select();"/>
+                                        <input  type='text' name='txtIgnore' style='display:none'>
+                                        <span style="margin-left:10px;"/>
+                                        <input type="button" id="1801_cxda_tab1_btn" value="" class="cls_search_button" onclick="submit1801_cxdatab1()"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="6" align="right" valign="top" background="/szseWeb/common/images/search06.gif">
+                            <img src="/szseWeb/common/images/search03.gif" height="6" width="6"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td background="/szseWeb/common/images/search05.gif"></td>
+                        <td background="/szseWeb/common/images/search06.gif"></td>
+                    </tr>
+                    <tr>
+                        <td width="6" align="left" valign="bottom" background="/szseWeb/common/images/search05.gif">
+                            <img src="/szseWeb/common/images/search02.gif" height="6" width="6"/>
+                        </td>
+                        <td width="6" align="right" valign="bottom" background="/szseWeb/common/images/search06.gif">
+                            <img src="/szseWeb/common/images/search04.gif" height="6" width="6"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <TABLE  height='5' cellSpacing='0' cellPadding='0'  border='0'>
+                <TBODY>
+                    <TR>
+                        <TD></TD>
+                    </TR>
+                </TBODY>
+            </TABLE>
+            <TABLE  height='10' cellSpacing='0' cellPadding='0'  border='0'>
+                <TBODY>
+                    <TR>
+                        <TD></TD>
+                    </TR>
+                </TBODY>
+            </TABLE>
+            <table class='cls-title-table' border='0' cellpadding='0' cellspacing='0' height='20' bgcolor='#ffffff' width="870" >
+                <tr class='cls-title-tr'>
+                    <td align='left' class='cls-title-td'>
+                        <span class='cls-title'>上市公司董事、监事、高级管理人员及相关人员持有本公司股份变动情况</span>
+                        <span id='MESSAGE_ID'>&nbsp;</span>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <TABLE class='cls-datatable-headline' cellSpacing='0' cellPadding='0' width ='870'  border='0'>
+                <TBODY>
+                    <TR>
+                        <TD></TD>
+                    </TR>
+                </TBODY>
+            </TABLE>
+            <table   bgcolor='#E0E0E0' id="REPORTID_tab1" class='cls-data-table'  cellspacing='1' border="0"   width="870" >
+                <tr  class='cls-data-tr-head' >
+                    <td  class='cls-data-th'  null width='60'     bgcolor='#E0E0E0' >证券代码</td>
+                    <td  class='cls-data-th'  null width='60'     bgcolor='#E0E0E0' >证券简称</td>
+                    <td  class='cls-data-th'  null width='70'     bgcolor='#E0E0E0' >董监高姓名</td>
+                    <td  class='cls-data-th'  null width='70'     bgcolor='#E0E0E0' >变动日期</td>
+                    <td  class='cls-data-th'  null width='80'     bgcolor='#E0E0E0' >变动股份数量</td>
+                    <td  class='cls-data-th'  null width='55'     bgcolor='#E0E0E0' >成交均价</td>
+                    <td  class='cls-data-th'  null width='70'     bgcolor='#E0E0E0' >变动原因</td>
+                    <td  class='cls-data-th'  null width='80'     bgcolor='#E0E0E0' >变动比例(‰)</td>
+                    <td  class='cls-data-th'  null width='80'     bgcolor='#E0E0E0' >当日结存股数</td>
+                    <td  class='cls-data-th'  null width='90'     bgcolor='#E0E0E0' >股份变动人姓名</td>
+                    <td  class='cls-data-th'  null width='75'     bgcolor='#E0E0E0' >职务</td>
+                    <td  class='cls-data-th'  null width='70'     bgcolor='#E0E0E0' >变动人与董监高的关系</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002089</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >新 海 宜</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >兰红兵</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-40000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >21.65</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0582</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >243900</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >兰红兵</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002168</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >深圳惠程</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >汪超涌</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >700</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >15.36</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0009</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >汪超英</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >兄弟姐妹</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002335</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >科华恒盛</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >赖永春</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-200</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >50.67</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0007</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >李艺妹</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >监事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >配偶</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002478</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >常宝股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >张兰永</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >330000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >10.31</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.8248</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >王烨</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >配偶</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002478</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >常宝股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >张兰永</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-330000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >10.31</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.8248</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >6728120</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >张兰永</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002522</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >浙江众成</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >黄旭生</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-200000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >23.36</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.2264</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >2644300</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >黄旭生</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002522</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >浙江众成</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >詹越强</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-100000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >23.70</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.1132</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >龙伊凡</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >监事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >配偶</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002580</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >圣阳股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >宫国伟</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-320000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >16.78</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >1.4479</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >1171232</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >宫国伟</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002580</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >圣阳股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >李恕华</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-300000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >16.78</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >1.3574</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >3776716</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >李恕华</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >监事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002580</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >圣阳股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >隋延波</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-550000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >16.78</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >2.4886</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >4146716</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >隋延波</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002592</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >八菱科技</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >黄志强</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-152800</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >35.03</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.5393</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >24350089</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >黄志强</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >002601</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >佰利联</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >吴彭森</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-60000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >15.45</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0839</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >1672000</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >吴彭森</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300009</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >安科生物</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >吴锐</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-30000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >28.52</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0566</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >3091223</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >吴锐</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300009</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >安科生物</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >赵辉</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-1300</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >28.43</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0025</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >赵云峰</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >兄弟姐妹</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300025</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >华星创业</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >鲍航</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >2000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >13.49</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0047</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >鲍宇</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董秘、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >兄弟姐妹</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300206</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >理邦仪器</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >祖幼冬</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-4500000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >11.60</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >7.6923</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >100104140</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >祖幼冬</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董秘、董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300209</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >天泽信息</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >金薇</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-2500000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >26.75</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >8.5581</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >孙伯荣</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >配偶</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300218</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >安利股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >徐红</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-3800</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >19.90</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.0175</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >徐红</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >证券事务代表</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#ffffff'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300218</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >安利股份</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >杨滁光</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-30000</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >19.72</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >竞价交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >0.1383</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >180000</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >杨滁光</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事、高管</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >本人</td>
+                </tr>
+                <tr  class='cls-data-tr' bgcolor='#F8F8F8'>
+                    <td  class='cls-data-td' style='mso-number-format:\@' width='60'  align='center' >300237</td>
+                    <td  class='cls-data-td' null width='60'  align='center' >美晨科技</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >张磊</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >2016-07-21</td>
+                    <td  class='cls-data-td' null width='80'  align='right' >-33921790</td>
+                    <td  class='cls-data-td' null width='55'  align='right' >9.83</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >大宗交易</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >42.0208</td>
+                    <td  class='cls-data-td' null width='80'  align='center' >-</td>
+                    <td  class='cls-data-td' null width='90'  align='center' >李晓楠</td>
+                    <td  class='cls-data-td' null width='75'  align='center' >董事</td>
+                    <td  class='cls-data-td' null width='70'  align='center' >配偶</td>
+                </tr>
+            </table>
+            <table id='tbl-data-bottom-line'  height='2' cellSpacing='0' cellPadding='0'  width="870" bgColor='#b8d9ec' border='0'>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <table height='1' border='0'>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table border='0' width="870" >
+                <tr>
+                    <td align="left" width="222px">共有49607条记录  当前第10页  共2481页</td>
+                    <td>&nbsp;</td>
+                    <td align="right" width="275px">
+                        <input type="button" name="navigatebutton" value="" class="cls-navigate-prev" onclick="gotoReportPageNo('1801_cxda','tab1',9,2481,49607)">&nbsp;
+                        <input type="button" name="navigatebutton" value="" class="cls-navigate-next" onclick="gotoReportPageNo('1801_cxda','tab1',11,2481,49607)">&nbsp;
+                        <input type="text" id="1801_cxda_tab1_naviboxid"  style="width:38px"  value="10" maxlength="10" class="cls-textbox" onfocus="this.select();" onkeydown="return doNavigateInputboxKeyDown(event,'1801_cxda_tab1_goid');"/>&nbsp;页&nbsp;
+                        <input type="button" name="navigatebutton" value="" class="cls-navigate-go" id="1801_cxda_tab1_goid" onclick="gotoReportPageNoByTextBox('1801_cxda','tab1','1801_cxda_tab1_naviboxid',2481,49607)"/>
+                    </td>
+                </tr>
+            </table>
+            <table border='0' width="870" >
+                <tr>
+                    <td align='left' width='100%'>
+                        <table>
+                            <tr>
+                                <td class="link1">注：1、相关人员包括：上市公司董事、监事、高级管理人员的父母、配偶、子女、兄弟姐妹及上市公司董事、监事、高级管理人员所控制的法人或其他组织；</td>
+                            </tr>
+                            <tr>
+                                <td class="link1"  style="padding-left:32px">2、变动比例是指持股变动股数与该证券总股本之比；</td>
+                            </tr>
+                            <tr>
+                                <td class="link1" style="padding-left:32px">3、当日结存股数是指中国结算公司完成当日股份过户处理后持股变动人所持有的总股数。</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<span style="display:none" id="szseWebReport_pageinfo_1801_cxda" catalogid="1801_cxda" tabkeys="tab1;" report_action="navigate" url="/szseWeb/FrontController.szse?ACTIONID=7&AJAX=AJAX-TRUE&CATALOGID=1801_cxda&TABKEY=tab1&tab1PAGENUM=10&tab1PAGECOUNT=2481&tab1RECORDCOUNT=49607"></span>
