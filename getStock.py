@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import os, sys, urllib, urllib2, json
 
-
-
 f = open('stock.list')
 for line in f.readlines():
     stockCode = line.strip()
